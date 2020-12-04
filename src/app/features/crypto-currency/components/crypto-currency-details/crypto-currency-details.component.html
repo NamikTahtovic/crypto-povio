@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+  <div fxFlex="100">
+    <div routerLink="/currency" class="back-to"><i class="material-icons">keyboard_arrow_left</i><p>Back to list</p></div>
+    <mat-card class="details-mat-card">
+      <mat-list role="list">
+        <div fxLayout="row">
+          <mat-list-item role="listitem">Rank:<span class="details-value-text">{{ !!(cryptoCurrency$).cmc_rank && (cryptoCurrency$).cmc_rank }}</span></mat-list-item>
+          <mat-list-item role="listitem">Name: <span class="details-value-text">{{ !!(cryptoCurrency$).name && (cryptoCurrency$).name }}</span></mat-list-item>
+        </div>
+        <div fxLayout="row">
+          <mat-list-item role="listitem">Symbol: <span class="details-value-text">{{ !!(cryptoCurrency$).symbol && (cryptoCurrency$).symbol }}</span></mat-list-item>
+          <mat-list-item role="listitem">Price: <span class="details-value-text">{{ !!(cryptoCurrency$).quote[selectedFiatCurrency$ | async].price && (cryptoCurrency$).quote[selectedFiatCurrency$ | async].price }}</span></mat-list-item>
+        </div>
+        <div fxLayout="row">
+          <mat-list-item role="listitem">1h change: <span class="details-value-text">{{ !!(cryptoCurrency$).quote[selectedFiatCurrency$ | async].percent_change_1h && (cryptoCurrency$).quote[selectedFiatCurrency$ | async].percent_change_1h }}</span></mat-list-item>
+          <mat-list-item role="listitem">24h change: <span class="details-value-text">{{ !!(cryptoCurrency$).quote[selectedFiatCurrency$ | async].percent_change_24h && (cryptoCurrency$).quote[selectedFiatCurrency$ | async].percent_change_24h }}</span></mat-list-item>
+        </div>
+        <div fxLayout="row">
+          <mat-list-item role="listitem">7d change: <span class="details-value-text">{{ !!(cryptoCurrency$).quote[selectedFiatCurrency$ | async].percent_change_7d && (cryptoCurrency$).quote[selectedFiatCurrency$ | async].percent_change_7d }}</span></mat-list-item>
+          <mat-list-item role="listitem">Available supplies: <span class="details-value-text">{{ !!(cryptoCurrency$).total_supply && (cryptoCurrency$).total_supply }}</span></mat-list-item>
+        </div>
+      </mat-list>
+    </mat-card>
+  </div>
+</div>

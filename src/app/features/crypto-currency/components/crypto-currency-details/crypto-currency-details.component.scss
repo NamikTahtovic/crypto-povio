@@ -1,0 +1,23 @@
+.details-mat-card {
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.details-value-text {
+    color: cadetblue;
+    margin-left: 4px;
+}
+
+.back-to {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    outline: none;
+    p {
+      color: cadetblue;
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 0px;
+    }
+  }
